@@ -9,4 +9,6 @@ Pod::Spec.new do |s|
   s.source_files = 'EasyFacebook/Pod Classes/*.{h,m}'
   s.requires_arc = true
   s.ios.deployment_target = '7.0'
+
+  s.dependency 'Facebook-iOS-SDK', '~>3.16.2'
 end
