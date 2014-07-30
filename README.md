@@ -43,10 +43,10 @@ Usage
 Writing a login method using EasyFacebook is easy.
 
 ```objective-c
-- (IBAction)loginButtonTapped {
+- (IBAction)facebookLoginButtonTapped {
 
     [[EasyFacebook sharedInstance] openSession:^(NSString *token) {
-        // Login succeeded and we have a valid facebook token string.
+        // Facebook login succeeded and we now have a valid facebook token string.
         // Send it to your servers for authentication, and then move to the next screen in the app.
     } error:^(NSError *error) {
         // Login failed, let the user know.
