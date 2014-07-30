@@ -1,7 +1,7 @@
 //
 //  EasyFacebook.h
 //
-//  Version 0.9.0
+//  Version 0.1.0
 //
 //  Created by Baris Sencan on 27/05/2014.
 //  Copyright 2014 Baris Sencan
