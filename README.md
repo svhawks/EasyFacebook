@@ -1,3 +1,5 @@
+_Example project coming soon._
+
 Purpose
 --------------
 
