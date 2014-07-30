@@ -59,7 +59,7 @@ If you are, for example, going to call an API end-point on your server that is g
 ```objective-c
 - (void)postFacebookStatus:(NSString *)status {
     
-    [[EasyFacebook sharedInstance] requestPublishPermissions:(^NSString *token) {
+    [[EasyFacebook sharedInstance] requestPublishPermissions:^(NSString *token) {
         // If we got to this line, then we have a valid token with both our read and publish permissions. This is guaranteed.
         // Send the new token to the server, so it updates the Facebook token associated with your user.
         // After the new token is sent successfully, call the end-point that you originally wanted to.
