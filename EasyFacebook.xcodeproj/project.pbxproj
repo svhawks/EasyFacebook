@@ -22,7 +22,7 @@
 		5F15D1491988849B00C642DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F15D1281988849B00C642DB /* UIKit.framework */; };
 		5F15D1511988849B00C642DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5F15D14F1988849B00C642DB /* InfoPlist.strings */; };
 		5F15D1531988849B00C642DB /* EasyFacebookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F15D1521988849B00C642DB /* EasyFacebookTests.m */; };
-		5F15D15F198887C400C642DB /* EasyFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F15D15E198887C400C642DB /* EasyFacebook.m */; };
+		5F15D162198894A800C642DB /* EasyFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F15D161198894A800C642DB /* EasyFacebook.m */; };
 		60BF991641154D74A7F0749C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B855B63C1BED45D285D7EAC0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -57,8 +57,8 @@
 		5F15D14E1988849B00C642DB /* EasyFacebookTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EasyFacebookTests-Info.plist"; sourceTree = "<group>"; };
 		5F15D1501988849B00C642DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5F15D1521988849B00C642DB /* EasyFacebookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyFacebookTests.m; sourceTree = "<group>"; };
-		5F15D15D198887C400C642DB /* EasyFacebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyFacebook.h; sourceTree = "<group>"; };
-		5F15D15E198887C400C642DB /* EasyFacebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyFacebook.m; sourceTree = "<group>"; };
+		5F15D160198894A800C642DB /* EasyFacebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EasyFacebook.h; path = "EasyFacebook/Pod Classes/EasyFacebook.h"; sourceTree = SOURCE_ROOT; };
+		5F15D161198894A800C642DB /* EasyFacebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EasyFacebook.m; path = "EasyFacebook/Pod Classes/EasyFacebook.m"; sourceTree = SOURCE_ROOT; };
 		A38A3CC8991E4A60ACE645E4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		B855B63C1BED45D285D7EAC0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -131,7 +131,7 @@
 				5F15D13D1988849B00C642DB /* BSViewController.m */,
 				5F15D13F1988849B00C642DB /* Images.xcassets */,
 				5F15D12B1988849B00C642DB /* Supporting Files */,
-				5F15D15C198887C400C642DB /* Classes */,
+				5F15D15C198887C400C642DB /* Pod Classes */,
 			);
 			path = EasyFacebook;
 			sourceTree = "<group>";
@@ -165,12 +165,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5F15D15C198887C400C642DB /* Classes */ = {
+		5F15D15C198887C400C642DB /* Pod Classes */ = {
 			isa = PBXGroup;
 			children = (
-				5F15D15D198887C400C642DB /* EasyFacebook.h */,
-				5F15D15E198887C400C642DB /* EasyFacebook.m */,
+				5F15D160198894A800C642DB /* EasyFacebook.h */,
+				5F15D161198894A800C642DB /* EasyFacebook.m */,
 			);
+			name = "Pod Classes";
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -309,8 +310,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F15D13E1988849B00C642DB /* BSViewController.m in Sources */,
-				5F15D15F198887C400C642DB /* EasyFacebook.m in Sources */,
 				5F15D1311988849B00C642DB /* main.m in Sources */,
+				5F15D162198894A800C642DB /* EasyFacebook.m in Sources */,
 				5F15D1351988849B00C642DB /* BSAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
