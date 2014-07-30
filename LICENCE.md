@@ -1,6 +1,6 @@
 EasyFacebook
 
-Version 1.0.0, July 29th, 2014
+Version 0.9.0, July 29th, 2014
 
 Copyright (C) 2014 Baris Sencan
 
