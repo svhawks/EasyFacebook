@@ -15,7 +15,7 @@ Installation
 Either simply copy the files _EasyFacebook.h_ and _EasyFacebook.m_ under _EasyFacebook/Pod Classes_ into your Xcode project or add via [CocoaPods](http://cocoapods.org) by adding this line to your Podfile:
 
 ```ruby
-pod 'EasyFacebook', '~>0.1.0'
+pod 'EasyFacebook', '~>0.1.1'
 ```
 
 Configuration
