@@ -11,4 +11,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '7.0'
 
   s.dependency 'Facebook-iOS-SDK', '~>3.16.2'
+  s.dependency 'FXKeychain', '~>1.5.1'
 end

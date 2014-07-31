@@ -31,6 +31,7 @@
 //
 
 #import <FacebookSDK/FacebookSDK.h>
+#import <FXKeychain/FXKeychain.h>
 #import "EasyFacebook.h"
 
 @import Social;
@@ -190,8 +191,7 @@
 
     if (FBSession.activeSession) {
         [FBSession.activeSession closeAndClearTokenInformation];
-        [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"BSFacebookToken"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
+        [[FXKeychain defaultKeychain] removeObjectForKey:@"BSFacebookToken"];
     }
 }
 
@@ -223,7 +223,7 @@
     [FBSession setActiveSession:session];
 
     // Check if there is a cached token.
-    NSDictionary *tokenDataDictionary = [[NSUserDefaults standardUserDefaults] objectForKey:@"BSFacebookToken"];
+    NSDictionary *tokenDataDictionary = [FXKeychain defaultKeychain][@"BSFacebookToken"];
 
     if (tokenDataDictionary) {
         NSDate *expirationDate = [tokenDataDictionary objectForKey:FBTokenInformationExpirationDateKey];
@@ -285,8 +285,7 @@
     NSString *token = session.accessTokenData.accessToken;
 
     if (token) {
-        [[NSUserDefaults standardUserDefaults] setObject:[session.accessTokenData dictionary] forKey:@"BSFacebookToken"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
+        [FXKeychain defaultKeychain][@"BSFacebookToken"] = [session.accessTokenData dictionary];
 
         if (successCallback) {
 
@@ -409,8 +408,7 @@
              NSString *token = session.accessTokenData.accessToken;
 
              if (token) {
-                 [[NSUserDefaults standardUserDefaults] setObject:[session.accessTokenData dictionary] forKey:@"BSFacebookToken"];
-                 [[NSUserDefaults standardUserDefaults] synchronize];
+                 [FXKeychain defaultKeychain][@"BSFacebookToken"] = [session.accessTokenData dictionary];
 
                  if (successCallback) {
 
