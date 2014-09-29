@@ -33,8 +33,22 @@ You need to set your Facebook's App ID and also the read and publish permissions
     [EasyFacebook sharedInstance].facebookAppID = @"YOUR_FACEBOOK_APP_ID";
     [EasyFacebook sharedInstance].facebookReadPermissions = @[@"email"];
     [EasyFacebook sharedInstance].facebookPublishPermissions = @[@"publish_actions"];
-
-    ...
+    
+    // Your Code
+    // ...
+    
+    return YES;
+   }
+   
+// During the Facebook login flow, your app passes control to the Facebook iOS app or Facebook in a mobile browser.
+// After authentication, your app will be called back with the session information.
+// Override application:openURL:sourceApplication:annotation to call the FBsession object that handles the incoming URL
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+  return [FBSession.activeSession handleOpenURL:url];
+}
 ```
 
 Usage
