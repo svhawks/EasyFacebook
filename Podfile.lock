@@ -1,7 +1,7 @@
 PODS:
-  - Bolts (1.1.0)
-  - Facebook-iOS-SDK (3.16.2):
-    - Bolts
+  - Bolts (1.1.3)
+  - Facebook-iOS-SDK (3.21.1):
+    - Bolts (~> 1.0)
   - FXKeychain (1.5.1)
 
 DEPENDENCIES:
@@ -9,8 +9,8 @@ DEPENDENCIES:
   - FXKeychain
 
 SPEC CHECKSUMS:
-  Bolts: 91c2af8eae1d44e1dd75946a5b0ae04a43ea43e4
-  Facebook-iOS-SDK: 34eef640c2cc4c8618ba0f574ad2b290e07f1b4e
+  Bolts: 3db0a875235e0c9042b013af13af0f00f79b102c
+  Facebook-iOS-SDK: 18c26e86ab25c17854a2ee2a8f60562099c6600f
   FXKeychain: beb642a4218ba783507af08865eda05e9b26a612
 
-COCOAPODS: 0.33.1
+COCOAPODS: 0.34.1
